@@ -1,5 +1,5 @@
 
-const eqArrays = require('./eqArray');
+const eqArrays = require('./eqArrays');
 
 // const eqArrays = function(firstArr, secondArr) {
 //   if (firstArr.length !== secondArr.length) {
