@@ -30,12 +30,4 @@ assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false
 
 
-
-
-// assertEqual("Lighthouse Labs", "Bootcamp");
-
-// assertEqual("Bootcamp", "Bootcamp");
-
-// assertEqual(1, 1);
-
-// assertEqual(1, 2);
+module.export = eqArrays;
