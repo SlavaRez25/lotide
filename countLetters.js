@@ -1,39 +1,25 @@
 
+const assertEqual = require('./assertEqual');
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-const countOnly = function(string) {
+const countLetters = function(str) {
   const count = {};
-
-  let strNoSpace = string.replace(/\s/g, '');
-  let strArray = strNoSpace.split('');
-
-  for (const items of strArray) {
-    if (count[items] !== ' ') {
-      if (count[items]) {
-        count[items] += 1;
-      } else {
-        count[items] = 1;
-      }
+  console.log(str);
+  let strNew = str.split(" ").join("").toLowerCase();
+  for (let i = 0; i < strNew.length; i++) {
+    let char = strNew.charAt(i);
+    if (count[char]) {
+      count[char]++;
+    } else {
+      count[char] = 1;
     }
-    // console.log(items);
   }
-
-
-  
-  
   return count;
 };
 
+// TEST CODE
 
-const letterCout = (countOnly("Lighthouse in the house"));
+assertEqual(countLetters("Lighthouse in the house")["s"], 2);
+assertEqual(countLetters("Lighthouse in the house")["h"], 4);
+assertEqual(countLetters("Lighthouse in the house")["e"], 3);
 
-assertEqual(letterCout["s"], 2);
-assertEqual(letterCout["h"], 4);
-assertEqual(letterCout["e"], 3);
+module.exports = countLetters;

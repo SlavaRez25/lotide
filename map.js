@@ -50,5 +50,5 @@ assertArraysEqual(result3, [6, 7, 2, 5, 3]);
 
 
 
-
+module.exports = map;
 

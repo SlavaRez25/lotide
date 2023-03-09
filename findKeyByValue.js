@@ -12,10 +12,9 @@ const findKeyByValue = function(obj, val) {
   for (const keys in obj) {
     if (obj[keys] === val) {
       return keys;
-    } else {
-      return undefined;
-    }
+    } 
   }
+  return undefined;
 };
 
 
@@ -30,4 +29,6 @@ assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
 assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");
 
+
+module.exports = findKeyByValue;
 

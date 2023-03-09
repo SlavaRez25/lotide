@@ -60,3 +60,4 @@ assertEqual(actual3, expected3);
 // console.log(actual1);
 
 
+module.exports = findKey;
