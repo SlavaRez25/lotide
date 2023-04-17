@@ -9,6 +9,5 @@ const assertEqual = function(actual, expected) {
   
 };
 
-//Test code
-
+// exporting function
 module.exports = assertEqual;

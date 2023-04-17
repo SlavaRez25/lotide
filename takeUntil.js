@@ -1,23 +1,6 @@
 
-const eqArrays = function(firstArr, secondArr) {
-  if (firstArr.length !== secondArr.length) {
-    return false;
-  }
-  for (let i = 0; i < firstArr.length; i++) {
-    if (firstArr[i] !== secondArr[i]) {
-      return false;
-    }
-  }
-  return true;
-};
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual')
 
 
 const takeUntil = function(array, callback) {
@@ -52,9 +35,5 @@ assertArraysEqual(results2, data2.slice(0, 4));
 
 assertArraysEqual(results1, [1, 2, 5, 7, 2]);
 
-
-// [ 1, 2, 5, 7, 2 ]
-// --
-// [ 'I\'ve', 'been', 'to', 'Hollywood' ]
-
+// export function
 module.exports = takeUntil;

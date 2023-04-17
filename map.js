@@ -1,34 +1,13 @@
 
 const words = ["ground", "control", "to", "major", "tom"];
 
-const eqArrays = function(firstArr, secondArr) {
-  if (firstArr.length !== secondArr.length) {
-    return false;
-  }
-  for (let i = 0; i < firstArr.length; i++) {
-    if (firstArr[i] !== secondArr[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅Assertion Passed: [${actual}] === [${expected}]`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: [${actual}] !== [${expected}]`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const map = function(array, callback) {
 
   const results = [];
 
   for (let item of array) {
-    // console.log("item Before ", item);
-    // console.log("item After ", callback(item));
-    // console.log('---')
     results.push(callback(item));
   }
   

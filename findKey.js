@@ -1,37 +1,21 @@
 
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  }
- 
-};
+const assertEqual = require('./assertEqual');
 
 
 const findKey = function(object, callback) {
   let keyArr = Object.keys(object);
 
   console.log("---");
-  // console.log(keyArr.length);
-  // console.log(keyArr);
 
   for (const keys of keyArr) {
-    // console.log(keyArr[keys], callback(object[keyArr[keys]], object[keyArr[keys]].stars));
-
-    // console.log(keys);
-
     if (callback(object[keys])) {
       // console.log(keys);
       return keys;
     }
-    // return keyArr[keys];
   }
   return undefined;
 };
-
-// object["Blue Hill"]
 
 let object = {
   "Blue Hill": { stars: 1 },
@@ -42,8 +26,6 @@ let object = {
   "Akelarre":  { stars: 3 }
 };
                    
-
-
 
 //Test code
 let actual1 = findKey(object, x => x.stars === 2);
@@ -57,7 +39,6 @@ assertEqual(actual2, expected2);
 let actual3 = findKey(object, x => x.stars === 10);
 let expected3 = undefined;
 assertEqual(actual3, expected3);
-// console.log(actual1);
 
-
+// export function
 module.exports = findKey;

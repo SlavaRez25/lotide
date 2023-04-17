@@ -18,7 +18,7 @@ const map = require('./map');
 const takeUntil = require('./takeUntil');
 const without = require('./without');
 
-
+// exporting object of functions
 module.exports = {
   head,
   tail,

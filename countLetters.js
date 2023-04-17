@@ -22,4 +22,5 @@ assertEqual(countLetters("Lighthouse in the house")["s"], 2);
 assertEqual(countLetters("Lighthouse in the house")["h"], 4);
 assertEqual(countLetters("Lighthouse in the house")["e"], 3);
 
+// exporting function
 module.exports = countLetters;
